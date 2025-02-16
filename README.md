@@ -34,7 +34,7 @@ The CSS is organized into these sections:
 
 ## Usage
 
-1. **Download/Copy:** Download `normalize-enhanced.css` or copy the code.
+1. **Download/Copy:** Download [`normalize-enhanced.css`](https://github.com/dcog989/css-normalize-enhanced/blob/main/normalize-enhanced.css) or copy the code.
 2. **Include in HTML:** Link `normalize-enhanced.css` as the **first** stylesheet in your `<head>`, *before* custom stylesheets.
 
 ```html
