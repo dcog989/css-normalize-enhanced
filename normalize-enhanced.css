@@ -1,0 +1,355 @@
+/* Modern CSS Normalize - For Modern Browsers */
+/* Gemini 2.0 Flash Thinking 01-21 - "produce a css normalize for modern browsers" */
+
+/* ==========================================================================
+  1. Document
+   ========================================================================== */
+
+/**
+ * Document-level resets and base styles.
+ * Includes:
+ *   - line-height correction
+ *   - text-size-adjust prevention
+ *   - box-sizing model
+ *   - scroll behavior
+ *   - body margin reset
+ *   - system font stack
+ *   - font smoothing
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, "Segoe UI", Cantarell, Ubuntu, Roboto, Noto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+  2. Typography
+   ========================================================================== */
+
+/**
+  * Remove default heading margins and standardize font sizes.
+  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+/**
+  * Remove default paragraph margins.
+  */
+p {
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+/**
+  * Style text-level semantics elements consistently.
+  */
+abbr[title] {
+  border-bottom: none;
+  cursor: help;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 0.8em;
+}
+
+sub,
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/**
+  * Improve quote styles.
+  */
+blockquote {
+  margin: 1em 40px;
+  quotes: '"\201C""\201D""\2018""\2019"'; /* Modern quote marks */
+}
+
+blockquote::before {
+  content: open-quote;
+}
+
+blockquote::after {
+  content: close-quote;
+}
+
+/* ==========================================================================
+    3. Embedded content
+    ========================================================================== */
+
+/**
+  * Remove border from images inside links.
+  */
+img {
+  border-style: none;
+  height: auto;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/**
+  * Improve figure and figcaption styles.
+  */
+figure {
+  margin: 1em;
+}
+
+figcaption {
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
+
+/* ==========================================================================
+    4. Forms
+    ========================================================================== */
+
+/**
+  * Remove default form element styling and ensure font inheritance.
+  */
+button,
+input,
+optgroup,
+select,
+textarea {
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  border: 0;
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  padding-inline-end: 2px;
+  padding-inline-start: 2px;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* ==========================================================================
+    5. Interactive
+    ========================================================================== */
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+:focus-visible {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+    6. Accessibility
+    ========================================================================== */
+
+/**
+  * Improve text readability for long words and URLs.
+  */
+* {
+  overflow-wrap: break-word;
+}
+
+/**
+  * Improve underline rendering (especially for links)
+  */
+a {
+  text-decoration-skip-ink: auto;
+}
+
+/* ==========================================================================
+    7. Lists
+    ========================================================================== */
+
+/**
+  * Remove default list styles.
+  */
+ul,
+ol {
+  list-style: none;
+  margin-bottom: 1em;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+/* ==========================================================================
+    8. Tables
+    ========================================================================== */
+
+/**
+  * Correct table spacing and border color.
+  */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+/* ==========================================================================
+    9. SVG and Canvas
+    ========================================================================== */
+
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==========================================================================
+    10. Interactive: Cursors
+    ========================================================================== */
+
+/**
+  * Change the cursor on potentially interactive elements.
+  */
+button,
+[role="button"],
+a,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+label {
+  cursor: pointer;
+}
+
+/* ==========================================================================
+    11. Selection
+    ========================================================================== */
+
+/**
+  * Customize text selection color for better user experience.
+  */
+::-moz-selection,
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
