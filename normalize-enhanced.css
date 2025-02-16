@@ -72,6 +72,7 @@ abbr[title] {
   text-decoration: underline dotted;
 }
 
+/* bolder = relative to the parent */
 b,
 strong {
   font-weight: bolder;
