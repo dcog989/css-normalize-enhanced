@@ -44,8 +44,8 @@ The CSS is organized into these sections:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Document</title>
-  <link rel="stylesheet" href="modern-normalize.css"> 
-  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="/css/normalize-enhanced.css"> 
+  <link rel="stylesheet" href="/css/style.css"> 
 </head>
 <body>[content goes here]</body>
 </html>
