@@ -1,20 +1,10 @@
 /* CSS Normalize Enhanced - For Modern Browsers */
+/* https://github.com/dcog989/css-normalize-enhanced/ */
+/* https://github.com/dcog989/css-normalize-enhanced/raw/refs/heads/main/normalize-enhanced.css */
 
 /* ==========================================================================
-  1. Document
+  1. Document ++
    ========================================================================== */
-
-/**
- * Document-level resets and base styles.
- * Includes:
- *   - line-height correction
- *   - text-size-adjust prevention
- *   - box-sizing model
- *   - scroll behavior
- *   - body margin reset
- *   - system font stack
- *   - font smoothing
- */
 
 *,
 *::before,
@@ -59,9 +49,7 @@ mark {
   2. Typography
    ========================================================================== */
 
-/**
-  * Remove default heading margins and standardize font sizes.
-  */
+/* Remove default heading margins and standardize font sizes. */
 h1,
 h2,
 h3,
@@ -74,17 +62,13 @@ h6 {
   margin-top: 0;
 }
 
-/**
-  * Remove default paragraph margins.
-  */
+/* Remove default paragraph margins. */
 p {
   margin-bottom: 1em;
   margin-top: 0;
 }
 
-/**
-  * Style text-level semantics elements consistently.
-  */
+/* Style text-level semantics elements consistently. */
 abbr[title] {
   border-bottom: none;
   cursor: help;
@@ -133,9 +117,7 @@ sup {
   top: -0.5em;
 }
 
-/**
-  * Improve quote styles.
-  */
+/* Improve quote styles. */
 blockquote {
   margin: 1em 40px;
   quotes: '"\201C""\201D""\2018""\2019"'; /* Modern quote marks */
@@ -153,17 +135,15 @@ blockquote::after {
     3. Embedded content
     ========================================================================== */
 
-/**
-  * Remove border from images inside links.
-  */
+/* Remove border from images inside links. */
 img,
 picture,
 video,
 canvas,
 svg {
   display: block; /* Prevent mystery space below */
+  height: auto;
   max-width: 100%;
-  /* height: auto; */ /* Usually implied by display:block or default */
 }
 
 img {
@@ -176,9 +156,7 @@ svg:not([fill]) {
   fill: currentColor; /* Make SVGs inherit text color by default */
 }
 
-/**
-  * Improve figure and figcaption styles.
-  */
+/* Improve figure and figcaption styles. */
 figure {
   margin: 1em;
 }
@@ -192,10 +170,7 @@ figcaption {
     4. Forms
     ========================================================================== */
 
-/**
-  * Remove default form element styling and ensure font inheritance.
-  */
-
+/* Remove default form element styling and ensure font inheritance. */
 button,
 input,
 optgroup,
@@ -326,16 +301,12 @@ summary {
     6. Accessibility
     ========================================================================== */
 
-/**
-  * Improve text readability for long words and URLs.
-  */
+/* Improve text readability for long words and URLs. */
 * {
   overflow-wrap: break-word;
 }
 
-/**
-  * Improve underline rendering (especially for links)
-  */
+/* Improve underline rendering (especially for links) */
 a {
   text-decoration-skip-ink: auto;
 }
@@ -344,9 +315,7 @@ a {
     7. Lists
     ========================================================================== */
 
-/**
-  * Remove default list styles.
-  */
+/* Remove default list styles. */
 ul,
 ol {
   /* Note: list-style: none removes default bullets/numbers. */
@@ -364,9 +333,7 @@ li {
     8. Tables
     ========================================================================== */
 
-/**
-  * Correct table spacing and border color.
-  */
+/* Correct table spacing and border color. */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -392,9 +359,7 @@ canvas {
     10. Interactive: Cursors
     ========================================================================== */
 
-/**
-  * Change the cursor on potentially interactive elements.
-  */
+/* Change the cursor on potentially interactive elements. */
 button,
 [role="button"],
 a,
@@ -409,9 +374,7 @@ label {
     11. Selection
     ========================================================================== */
 
-/**
-  * Customize text selection color for better user experience.
-  */
+/* Customize text selection color for better user experience. */
 ::-moz-selection,
 ::selection {
   background: #b3d4fc;
