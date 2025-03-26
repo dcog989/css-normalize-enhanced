@@ -1,336 +1,400 @@
 /* CSS Normalize Enhanced - For Modern Browsers */
 
 /* ==========================================================================
-  1. Document
-   ========================================================================== */
+  1. Document
+   ========================================================================== */
 
 /**
- * Document-level resets and base styles.
- * Includes:
- *   - line-height correction
- *   - text-size-adjust prevention
- *   - box-sizing model
- *   - scroll behavior
- *   - body margin reset
- *   - system font stack
- *   - font smoothing
- */
+ * Document-level resets and base styles.
+ * Includes:
+ *   - line-height correction
+ *   - text-size-adjust prevention
+ *   - box-sizing model
+ *   - scroll behavior
+ *   - body margin reset
+ *   - system font stack
+ *   - font smoothing
+ */
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+* {
+  overflow-wrap: break-word;
 }
 
 html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: system-ui, "Segoe UI", Cantarell, Ubuntu, Roboto, Noto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, "Segoe UI", Cantarell, Ubuntu, Roboto, Noto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+hr {
+  box-sizing: content-box; /* Address potential box-sizing issues */
+  height: 0; /* Correct height inconsistency */
+  overflow: visible; /* Show overflow in Edge and IE */
+  border: 0;
+  border-top: 1px solid #ccc; /* Provide a basic visual */
+  margin-block: 1em; /* Consistent vertical spacing */
+  color: inherit; /* Correct border color inheritance in Firefox */
+}
+
+mark {
+  background-color: #ff0; /* Or a preferred highlight color */
+  color: #000;
 }
 
 /* ==========================================================================
-  2. Typography
-   ========================================================================== */
+  2. Typography
+   ========================================================================== */
 
 /**
-  * Remove default heading margins and standardize font sizes.
-  */
+  * Remove default heading margins and standardize font sizes.
+  */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: bold;
-  margin-bottom: 0.5em;
-  margin-top: 0;
+  font-size: inherit;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin-top: 0;
 }
 
 /**
-  * Remove default paragraph margins.
-  */
+  * Remove default paragraph margins.
+  */
 p {
-  margin-bottom: 1em;
-  margin-top: 0;
+  margin-bottom: 1em;
+  margin-top: 0;
 }
 
 /**
-  * Style text-level semantics elements consistently.
-  */
+  * Style text-level semantics elements consistently.
+  */
 abbr[title] {
-  border-bottom: none;
-  cursor: help;
-  text-decoration: underline dotted;
+  border-bottom: none;
+  cursor: help;
+  text-decoration: underline dotted;
 }
 
 /* bolder = relative to the parent */
 b,
 strong {
-  font-weight: bolder;
+  font-weight: bolder;
 }
 
 code,
 kbd,
 samp,
 pre {
-  font-family: monospace;
-  font-size: 1em;
+  font-family: monospace;
+  font-size: 1em;
+}
+
+pre {
+  /* font-family/size already set */
+  white-space: pre-wrap; /* Allows wrapping within the pre tag */
+  word-wrap: break-word; /* Ensures long unwrappable lines break */
+  margin-bottom: 1em; /* Consistent spacing */
+  margin-top: 0;
 }
 
 small {
-  font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 sub,
 sup {
-  font-size: 0.75em;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -0.5em;
+  top: -0.5em;
 }
 
 /**
-  * Improve quote styles.
-  */
+  * Improve quote styles.
+  */
 blockquote {
-  margin: 1em 40px;
-  quotes: '"\201C""\201D""\2018""\2019"'; /* Modern quote marks */
+  margin: 1em 40px;
+  quotes: '"\201C""\201D""\2018""\2019"'; /* Modern quote marks */
 }
 
 blockquote::before {
-  content: open-quote;
+  content: open-quote;
 }
 
 blockquote::after {
-  content: close-quote;
+  content: close-quote;
 }
 
 /* ==========================================================================
-    3. Embedded content
-    ========================================================================== */
+    3. Embedded content
+    ========================================================================== */
 
 /**
-  * Remove border from images inside links.
-  */
+  * Remove border from images inside links.
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block; /* Prevent mystery space below */
+  max-width: 100%;
+  /* height: auto; */ /* Usually implied by display:block or default */
+}
+
 img {
-  border-style: none;
-  height: auto;
-  max-width: 100%;
-  vertical-align: bottom;
+  border-style: none; /* Corrects border on linked images in IE 10- */
+  height: auto; /* Explicitly maintain aspect ratio */
+}
+
+/* Add SVG specific rule */
+svg:not([fill]) {
+  fill: currentColor; /* Make SVGs inherit text color by default */
 }
 
 /**
-  * Improve figure and figcaption styles.
-  */
+  * Improve figure and figcaption styles.
+  */
 figure {
-  margin: 1em;
+  margin: 1em;
 }
 
 figcaption {
-  font-size: 0.9em;
-  margin-top: 0.5em;
+  font-size: 0.9em;
+  margin-top: 0.5em;
 }
 
 /* ==========================================================================
-    4. Forms
-    ========================================================================== */
+    4. Forms
+    ========================================================================== */
 
 /**
-  * Remove default form element styling and ensure font inheritance.
-  */
+  * Remove default form element styling and ensure font inheritance.
+  */
+
 button,
 input,
 optgroup,
 select,
 textarea {
-  appearance: none;
-  background-color: transparent;
-  border: 0;
-  color: inherit;
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-  padding: 0;
+  /* Note: This is a heavy reset, removing most default browser styling. */
+  /* You will need to explicitly style these elements in your project. */
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0;
 }
+
+/* Add disabled state styling */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.5; /* Common visual cue for disabled state */
+}
+
+/* Specific considerations for checkbox/radio after heavy reset */
+/* You might need base styles for these if appearance: none removes them visually */
+/* [type="checkbox"],
+[type="radio"] {
+   Example: You might need to set a width/height here
+   width: 1em;
+   height: 1em;
+   border: 1px solid gray; /* Example basic styling
+} */
 
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
+  -webkit-appearance: button;
 }
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+  border-style: none;
+  padding: 0;
 }
 
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: 1px dotted ButtonText;
 }
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.75em 0.625em;
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
-  border: 0;
-  color: inherit;
-  display: block;
-  max-width: 100%;
-  padding-inline-end: 2px;
-  padding-inline-start: 2px;
-  white-space: normal;
+  border: 0;
+  color: inherit;
+  display: block;
+  max-width: 100%;
+  padding-inline-end: 2px;
+  padding-inline-start: 2px;
+  white-space: normal;
 }
 
 progress {
-  vertical-align: baseline;
+  vertical-align: baseline;
 }
 
 textarea {
-  overflow: auto;
-  resize: vertical;
+  overflow: auto;
+  resize: vertical;
 }
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto;
+  height: auto;
 }
 
 [type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
 }
 
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
+  -webkit-appearance: button;
+  font: inherit;
 }
 
 /* ==========================================================================
-    5. Interactive
-    ========================================================================== */
+    5. Interactive
+    ========================================================================== */
 
 details {
-  display: block;
+  display: block;
 }
 
 summary {
-  display: list-item;
+  display: list-item;
 }
 
 :focus-visible {
-  outline: 2px solid Highlight;
-  outline-offset: 2px;
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
 }
 
 /* ==========================================================================
-    6. Accessibility
-    ========================================================================== */
+    6. Accessibility
+    ========================================================================== */
 
 /**
-  * Improve text readability for long words and URLs.
-  */
+  * Improve text readability for long words and URLs.
+  */
 * {
-  overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /**
-  * Improve underline rendering (especially for links)
-  */
+  * Improve underline rendering (especially for links)
+  */
 a {
-  text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* ==========================================================================
-    7. Lists
-    ========================================================================== */
+    7. Lists
+    ========================================================================== */
 
 /**
-  * Remove default list styles.
-  */
+  * Remove default list styles.
+  */
 ul,
 ol {
-  list-style: none;
-  margin-bottom: 1em;
-  margin-top: 0;
-  padding-left: 0;
+  /* Note: list-style: none removes default bullets/numbers. */
+  list-style: none;
+  margin-bottom: 1em;
+  margin-top: 0;
+  padding-inline-start: 0; /* Use logical property */
 }
 
 li {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.25em;
 }
 
 /* ==========================================================================
-    8. Tables
-    ========================================================================== */
+    8. Tables
+    ========================================================================== */
 
 /**
-  * Correct table spacing and border color.
-  */
+  * Correct table spacing and border color.
+  */
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 td,
 th {
-  padding: 0;
-  text-align: left;
+  padding: 0;
+  text-align: left; /* Keep or adjust for th if needed */
+  vertical-align: top; /* Align content to the top */
 }
 
 /* ==========================================================================
-    9. SVG and Canvas
-    ========================================================================== */
+    9. SVG and Canvas
+    ========================================================================== */
 
 canvas {
-  display: block;
-  max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /* ==========================================================================
-    10. Interactive: Cursors
-    ========================================================================== */
+    10. Interactive: Cursors
+    ========================================================================== */
 
 /**
-  * Change the cursor on potentially interactive elements.
-  */
+  * Change the cursor on potentially interactive elements.
+  */
 button,
 [role="button"],
 a,
@@ -338,18 +402,18 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 label {
-  cursor: pointer;
+  cursor: pointer;
 }
 
 /* ==========================================================================
-    11. Selection
-    ========================================================================== */
+    11. Selection
+    ========================================================================== */
 
 /**
-  * Customize text selection color for better user experience.
-  */
+  * Customize text selection color for better user experience.
+  */
 ::-moz-selection,
 ::selection {
-  background: #b3d4fc;
-  text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
