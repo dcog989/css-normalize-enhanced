@@ -53,7 +53,7 @@ The CSS is organized into these sections:
 
 ## Customization
 
-Customize typography, colors, focus styles, margins, padding, and form element styling in your own stylesheets. Direct modification of `modern-normalize.css` is not recommended.
+Customize typography, colors, focus styles, margins, padding, and form element styling in your own stylesheets. Direct modification of `normalize-enhanced.css` is not recommended.
 
 
 ## Credits
