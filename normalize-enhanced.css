@@ -105,15 +105,15 @@ input,
 optgroup,
 select,
 textarea {
-    appearance: none;
     -webkit-appearance: none;
-    vertical-align: middle;
+    appearance: none;
+    background: transparent;
+    border: 0;
     color: inherit;
     font: inherit;
-    background: transparent;
-    padding: 0;
     margin: 0;
-    border: 0;
+    padding: 0;
+    vertical-align: middle;
 }
 
 button,
