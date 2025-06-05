@@ -1,10 +1,18 @@
-/* CSS Normalize Enhanced - For Modern Browsers (2020+) */
-/* Version 1.1.3 */
-/* https://github.com/dcog989/css-normalize-enhanced/ */
+/* Normalize Enhanced
+A modern CSS baseline that combines normalization with opinionated resets for a clean slate.
+Version: 1.3.2
+*/
 
 /* ----------------------------------------------------------------------------
-    1. Basics
+1. Basics & Box Model
 */
+
+html {
+    line-height: 1.15; /* Correct the line height in all browsers. */
+    -webkit-text-size-adjust: 100%; /* Prevent font size adjustments in iOS. */
+    box-sizing: border-box; /* A more intuitive box model. */
+    scroll-behavior: smooth;
+}
 
 *,
 *::before,
@@ -12,39 +20,27 @@
     box-sizing: inherit;
 }
 
-html {
-    line-height: 1.15; /* Correct the line height in all browsers. */
-    -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. */
-    box-sizing: border-box; /* Apply a more intuitive box model calculation. */
-    scroll-behavior: smooth;
-}
+/* ----------------------------------------------------------------------------
+2. Base & Typography
+*/
 
 body {
-    font-family: system-ui, "Segoe UI", Cantarell, Ubuntu, Roboto, Noto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
+    font-family: system-ui, "Segoe UI", Cantarell, Ubuntu, Roboto, Noto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; /* Still relevant for macOS Firefox */
+    -moz-osx-font-smoothing: grayscale;
     overflow-wrap: break-word;
 }
 
 hr {
-    box-sizing: content-box; /* Add the correct box sizing in Firefox. */
-    height: 0; /* Add the correct height in Firefox. */
-    overflow: visible; /* Show the overflow in some browsers. */
     border: 0;
-    border-top: 1px solid gray;
+    border-top: 1px solid #ccc;
     margin-block: 1em;
-    color: inherit; /* Correct border color inheritance in Firefox. */
 }
 
-mark {
-    background-color: gold;
-    color: black;
+p {
+    margin-block: 0 1em;
 }
-
-/* ----------------------------------------------------------------------------
-    2. Typography
-*/
 
 h1,
 h2,
@@ -54,20 +50,7 @@ h5,
 h6 {
     font-size: inherit; /* Reset-like: forces explicit styling. */
     font-weight: bold;
-    margin-block-start: 0;
-    margin-block-end: 0.5em;
-}
-
-p {
-    margin-block-start: 0;
-    margin-block-end: 1em;
-}
-
-abbr[title] {
-    border-bottom: none; /* Remove the bottom border in older Chrome versions. */
-    cursor: help;
-    text-decoration: underline dotted;
-    text-decoration-skip-ink: auto;
+    margin-block: 0 0.5em;
 }
 
 b,
@@ -75,57 +58,28 @@ strong {
     font-weight: bolder;
 }
 
+abbr[title] {
+    cursor: help;
+    text-decoration: underline dotted;
+    text-decoration-skip-ink: auto;
+}
+
 code,
 kbd,
 samp,
 pre {
     font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 1em; /* Correct the odd `em` font sizing in all browsers. */
+    font-size: 1em;
 }
 
 pre {
+    margin-block: 0 1em;
     overflow-wrap: break-word;
-    white-space: pre-wrap;
-    margin-block-start: 0;
-    margin-block-end: 1em;
-}
-
-small {
-    font-size: 0.8em;
-}
-
-sub,
-sup {
-    font-size: 0.75em;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-sub {
-    bottom: -0.25em;
-}
-
-sup {
-    top: -0.5em;
-}
-
-blockquote {
-    margin-block: 1em;
-    margin-inline: 40px;
-    quotes: '"\201C""\201D""\2018""\2019"';
-}
-
-blockquote::before {
-    content: open-quote;
-}
-
-blockquote::after {
-    content: close-quote;
+    white-space: pre-wrap; /* Wrap long lines in preformatted text. */
 }
 
 /* ----------------------------------------------------------------------------
-    3. Embedded content
+3. Embedded Content (Responsive by default)
 */
 
 img,
@@ -142,18 +96,8 @@ svg:not([fill]) {
     fill: currentColor;
 }
 
-figure {
-    margin-block: 1em;
-    margin-inline: 1em;
-}
-
-figcaption {
-    font-size: 0.9em;
-    margin-block-start: 0.5em;
-}
-
 /* ----------------------------------------------------------------------------
-    4. Forms
+4. Forms (Reset for custom styling)
 */
 
 button,
@@ -162,23 +106,14 @@ optgroup,
 select,
 textarea {
     appearance: none;
-    -webkit-appearance: none; /* Still beneficial for full reset on some elements in WebKit/Blink */
-    background-color: transparent;
-    border: 0;
+    -webkit-appearance: none;
+    vertical-align: middle;
     color: inherit;
     font: inherit;
-    line-height: 1.15; /* Re-assert after `font: inherit` for consistent input height */
-    margin: 0;
+    background: transparent;
     padding: 0;
-    vertical-align: middle;
-}
-
-button:disabled,
-input:disabled,
-select:disabled,
-textarea:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
+    margin: 0;
+    border: 0;
 }
 
 button,
@@ -189,108 +124,28 @@ button,
     appearance: button;
 }
 
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-}
-
-fieldset {
-    border: 1px solid gray;
-    margin-inline: 2px;
-    padding-block-start: 0.35em;
-    padding-inline: 0.75em;
-    padding-block-end: 0.625em;
-}
-
-legend {
-    border: 0;
-    color: inherit;
-    display: table; /* Corrects text wrapping in some browsers */
-    max-width: 100%;
-    padding-inline: 2px;
-    white-space: normal;
-}
-
-progress {
-    vertical-align: baseline;
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
 textarea {
     resize: vertical;
 }
 
-[type="checkbox"],
-[type="radio"] {
-    box-sizing: border-box; /* Apply consistent box model */
-    padding: 0;
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-    height: auto;
-}
-
-[type="search"] {
-    -webkit-appearance: textfield;
-    appearance: textfield;
-    outline-offset: -2px;
-}
-
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit;
-}
-
 /* ----------------------------------------------------------------------------
-    5. Interactive
-*/
-
-details {
-    display: block;
-}
-
-summary {
-    display: list-item;
-}
-
-:focus-visible {
-    outline: 2px solid Highlight;
-    outline-offset: 2px;
-}
-
-/* ----------------------------------------------------------------------------
-    6. Accessibility & Links
-*/
-
-a {
-    text-decoration-skip-ink: auto;
-}
-
-/* ----------------------------------------------------------------------------
-    7. Lists
+5. Lists & Tables (Unstyled by default)
 */
 
 ul,
 ol {
-    margin-block-start: 0;
-    margin-block-end: 1em;
+    list-style: none; /* Reset-like: remove default list markers. */
+    margin-block: 0 1em;
     padding-inline-start: 0;
 }
-
-li {
-    margin-block-end: 0.25em;
-}
-
-/* ----------------------------------------------------------------------------
-    8. Tables
-*/
 
 table {
     border-collapse: collapse;
@@ -305,14 +160,20 @@ th {
 }
 
 /* ----------------------------------------------------------------------------
-    9. Interactive: Cursors
+6. Interactive & Accessibility
 */
+
+:focus-visible {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+}
 
 button,
 [role="button"],
 a,
 label[for],
 select,
+summary,
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
@@ -322,11 +183,16 @@ input[type="radio"] {
 }
 
 /* ----------------------------------------------------------------------------
-    10. Selection
+7. Opinionated Stylistic Defaults
 */
 
 ::selection {
-    background-color: lightblue;
-    color: black;
+    background-color: #007bff;
+    color: white;
     text-shadow: none;
+}
+
+mark {
+    background-color: #ff0;
+    color: black;
 }
